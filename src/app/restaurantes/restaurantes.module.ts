@@ -6,6 +6,9 @@ import { RestauranteComponent } from './pages/restaurante/restaurante.component'
 import { HomeComponent } from './pages/home/home.component';
 import { ListadoComponent } from './pages/listado/listado.component';
 import { RestaurantesRountingModule } from './restaurantes-rounting.module';
+import { MaterialModule } from '../material/material.module';
+import { RestauranteTarjetaComponent } from './components/restaurante-tarjeta/restaurante-tarjeta.component';
+import { ImagenPipe } from './pipes/imagen.pipe';
 
 
 
@@ -15,11 +18,14 @@ import { RestaurantesRountingModule } from './restaurantes-rounting.module';
     BuscarComponent,
     RestauranteComponent,
     HomeComponent,
-    ListadoComponent
+    ListadoComponent,
+    RestauranteTarjetaComponent,
+    ImagenPipe
   ],
   imports: [
     CommonModule,
-    RestaurantesRountingModule
+    RestaurantesRountingModule,
+    MaterialModule
   ]
 })
 export class RestaurantesModule { }

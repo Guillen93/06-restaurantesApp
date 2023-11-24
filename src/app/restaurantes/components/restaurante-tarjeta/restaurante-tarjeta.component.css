@@ -1,0 +1,10 @@
+mat-card{
+    margin-top:20px;
+    max-height: 450px;
+    min-height: 450px;
+    text-size-adjust: inherit;
+}
+img{
+    max-height: 450px;
+    min-height: 250px;
+  }
