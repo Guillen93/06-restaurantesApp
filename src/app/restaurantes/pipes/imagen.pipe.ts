@@ -7,7 +7,7 @@ import { Restaurante } from '../interfaces/restaurantes.interfaces';
 export class ImagenPipe implements PipeTransform {
 
   transform(restaurante:Restaurante): string {
-    return 'assets/Fotos/' + restaurante.Imagen;
+    return 'assets/Fotos/' + restaurante.imagen;
   }
 
 

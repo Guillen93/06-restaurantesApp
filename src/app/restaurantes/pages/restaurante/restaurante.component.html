@@ -10,22 +10,22 @@
 <div *ngIf="restaurante; else divLoading" class="grid p-2">
 	<mat-card class="col-12 sm:col-6">
     	<mat-card-header>
-        	<mat-card-title>{{restaurante[0].Nombre}}</mat-card-title>	 
+        	<mat-card-title>{{restaurante.nombre}}</mat-card-title>	 
     	</mat-card-header>
-    	<img [src]="restaurante[0] | imagen" [alt]="restaurante[0].Nombre" mat-card-image>
+    	<img [src]="restaurante | imagen" [alt]="restaurante.nombre" mat-card-image>
 	</mat-card>
 	<mat-card class="col-12 sm:col-6">
     	<mat-card-header>
         	<mat-card-title>Información</mat-card-title>
-        	<mat-card-subtitle>{{restaurante[0].Nombre}}</mat-card-subtitle>	 
+        	<mat-card-subtitle>{{restaurante.nombre}}</mat-card-subtitle>	 
     	</mat-card-header>
     	<mat-card-content>
         	<mat-list>
-                <mat-list-item>{{restaurante[0].Descripcion}}</mat-list-item>
-            	<mat-list-item>{{restaurante[0].Direccion}}</mat-list-item>
-            	<mat-list-item>{{restaurante[0].Capacidad}}</mat-list-item>
-            	<mat-list-item>{{restaurante[0].Telefono}}</mat-list-item>
-            	<mat-list-item>{{restaurante[0].WEB}}</mat-list-item>
+                <mat-list-item>{{restaurante.descripcion}}</mat-list-item>
+            	<mat-list-item>{{restaurante.direccion}}</mat-list-item>
+            	<mat-list-item>{{restaurante.capacidad}}</mat-list-item>
+            	<mat-list-item>{{restaurante.telefono}}</mat-list-item>
+            	<mat-list-item>{{restaurante.wEB}}</mat-list-item>
         	</mat-list>
         	<button mat-button color="warn" >
             	Regresar

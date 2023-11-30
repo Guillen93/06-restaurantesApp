@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Restaurante } from '../../interfaces/restaurantes.interfaces';
 import { RestaurantesService } from '../../services/restaurantes.service';
 
@@ -9,8 +9,8 @@ import { RestaurantesService } from '../../services/restaurantes.service';
   styleUrls: ['./restaurante.component.css']
 })
 export class RestauranteComponent {
-  restaurante: Restaurante[]=[];
-  constructor(private activatedRoute: ActivatedRoute, private restaurantesService: RestaurantesService) { }
+  restaurante!: Restaurante;
+  constructor(private activatedRoute: ActivatedRoute, private restaurantesService: RestaurantesService,   private router:Router) { }
 
 
   id!: string;
@@ -21,4 +21,8 @@ export class RestauranteComponent {
     this.restaurantesService.getRestaurantesPorId(this.id).subscribe(rest => this.restaurante = rest);
 
   }
+  regresar(){
+    this.router.navigate(['/restaurantes/listado']);
+  }
+
 }

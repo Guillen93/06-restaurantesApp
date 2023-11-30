@@ -1,19 +1,19 @@
-<mat-card>
+<mat-card class="divRestaurante">
     <mat-card-header>
-        <mat-card-title>{{restaurante.Nombre}}</mat-card-title>
+        <mat-card-title>{{restaurante.nombre}}</mat-card-title>
         <br>
     </mat-card-header><br><br>
     <img mat-card-image [src]="restaurante | imagen">
     
     <mat-card-content>
         <p>
-            <strong>Telefono: </strong>{{restaurante.Telefono}}
+            <strong>Telefono: </strong>{{restaurante.telefono}}
             <br>
-            <strong>Email: </strong>{{restaurante.Email}}
+            <strong>Email: </strong>{{restaurante.email}}
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button color="warn" [routerLink]="['/restaurantes', restaurante.Id]">Leer más...</button>
-        <button mat-button color="info" [routerLink]="['/restaurantes/editar', restaurante.Id]">Editar</button>
+        <button mat-button color="warn" [routerLink]="['/restaurantes', restaurante.id]">Leer más...</button>
+        <button mat-button color="info" [routerLink]="['/restaurantes/editar', restaurante.id]">Editar</button>
     </mat-card-actions>
 </mat-card>

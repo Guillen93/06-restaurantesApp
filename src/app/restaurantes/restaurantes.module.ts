@@ -9,7 +9,7 @@ import { RestaurantesRountingModule } from './restaurantes-rounting.module';
 import { MaterialModule } from '../material/material.module';
 import { RestauranteTarjetaComponent } from './components/restaurante-tarjeta/restaurante-tarjeta.component';
 import { ImagenPipe } from './pipes/imagen.pipe';
-
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -25,7 +25,8 @@ import { ImagenPipe } from './pipes/imagen.pipe';
   imports: [
     CommonModule,
     RestaurantesRountingModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ]
 })
 export class RestaurantesModule { }
