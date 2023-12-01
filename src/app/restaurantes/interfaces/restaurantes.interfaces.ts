@@ -11,4 +11,5 @@ export interface Restaurante {
     lat:         string;
     lon:         string;
     url:         string;
+    alt_img?: string;
 }

@@ -25,7 +25,7 @@ export class BuscarComponent {
   restauranteSeleccionado!: Restaurante;
   opcionSeleccionada(event: MatAutocompleteSelectedEvent) {
     const restaurante: Restaurante = event.option.value;
-    //console.log(heroe);
+    //console.log(restaurante);
     this.termino = restaurante.nombre; //para que se vea en el input
     this.restaurantesService.getRestaurantesPorId(restaurante.id!)
       .subscribe(rest => this.restauranteSeleccionado = rest);

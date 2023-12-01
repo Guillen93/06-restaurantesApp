@@ -17,17 +17,22 @@
 	<mat-card class="col-12 sm:col-6">
     	<mat-card-header>
         	<mat-card-title>Información</mat-card-title>
-        	<mat-card-subtitle>{{restaurante.nombre}}</mat-card-subtitle>	 
+        	<mat-card-subtitle>Nombre: {{restaurante.nombre}}</mat-card-subtitle>	 
     	</mat-card-header>
     	<mat-card-content>
         	<mat-list>
+				<h1>Descripcion</h1>
                 <mat-list-item>{{restaurante.descripcion}}</mat-list-item>
+				<h1>Direccion:</h1>
             	<mat-list-item>{{restaurante.direccion}}</mat-list-item>
-            	<mat-list-item>{{restaurante.capacidad}}</mat-list-item>
+				<h1>Capacidad:</h1>
+            	<mat-list-item>{{restaurante.capacidad}}pax</mat-list-item>
+				<h1>Telefono:</h1>
             	<mat-list-item>{{restaurante.telefono}}</mat-list-item>
+				<h1>WEB:</h1>
             	<mat-list-item>{{restaurante.wEB}}</mat-list-item>
         	</mat-list>
-        	<button mat-button color="warn" >
+        	<button mat-button color="warn" [routerLink]="['/restaurantes/listado']">
             	Regresar
         	</button>
     	</mat-card-content>
