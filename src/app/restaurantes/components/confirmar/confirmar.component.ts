@@ -13,6 +13,10 @@ export class ConfirmarComponent {
     
     @Inject(MAT_DIALOG_DATA) public data: Restaurante) { }
 
+    ngOnInit(): void{
+      console.log(this.data);
+    }
+
   borrar(){
     this.dialogRef.close(true); //si quiere borrarlo
   }

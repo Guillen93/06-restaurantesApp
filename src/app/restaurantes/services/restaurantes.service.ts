@@ -26,7 +26,7 @@ private baseUrl: string = environment.baseUrl;
     //regresa un         <Heroe>  :Observable<Heroe>
   }
   actualizarRestaurante(restaurante: Restaurante):Observable<Restaurante>{//recibe un heroe
-    return this.http.post<Restaurante>(this.baseUrl + '/restaurantes/' + restaurante.id, restaurante);    
+    return this.http.put<Restaurante>(this.baseUrl + '/restaurantes/' + restaurante.id, restaurante);    
     //return this.http.put<Heroe>(`${this.baseUrl}/heroes/${heroe.id}`, heroe); 
         //regresa un         <Heroe>  :Observable<Heroe>
       }
